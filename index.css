@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --corprincipal: #767676;
+  --corspan:#00f7ff; 
+  --corbg: #121212;
+  --cortxt: #efefef;
+  --sombra: 0px 0px 7px var(--corprincipal);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.conteudo-total {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--corbg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--cortxt);
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.meses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cortxt);
+    gap: 15px;
+    border: 1px solid var(--corprincipal);
+    box-shadow: var(--sombra);
+    padding: 0px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container-geral {
+    display: grid;
+    width: 600px;
+    height: 400px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container-geral .container-anotacoes {
+    border-radius: 10px;
+    border: 1px solid var(--corprincipal);
+    box-shadow: var(--sombra);
+}
+
+.container-geral #dia5 {
+    grid-area: 1 / 1 / 4 / 3;
+}
+
+.container-geral #dia20 {
+    grid-area: 1 / 3 / 4 / 5;
+}
+
+.container-geral #nomes {
+    grid-area: 4 / 1 / 7 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.container-geral #nomes .pessoa {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--corprincipal);
+    box-shadow: var(--sombra);
+    padding: 10px;
+}
+
+.container-geral #nomes .pessoa .dia-nome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--cortxt);
+    border: 1px solid var(--corprincipal);
+    box-shadow: var(--sombra);
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
